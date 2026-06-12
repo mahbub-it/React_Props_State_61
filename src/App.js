@@ -11,10 +11,11 @@ import Contact from './Pages/Contact';
 import Engage from './Pages/Services/Engage';
 import Pontificate from './Pages/Services/Pontificate';
 import Synergize from './Pages/Services/Synergize';
+import SinglePost from './Pages/SinglePost';
 
 function App() {
   return (
-     <HelmetProvider>
+    <HelmetProvider>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -25,7 +26,8 @@ function App() {
           <Route path='/services/pontificate' element={<Pontificate />} />
           <Route path='/services/synergize' element={<Synergize />} />
           <Route path='/contact' element={<Contact />} />
-          
+          <Route path='/SinglePost/:id' element={<SinglePost />} />
+
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

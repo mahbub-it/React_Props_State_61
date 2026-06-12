@@ -35,14 +35,14 @@ const Home = () => {
     }
   ]
   return (
-   <>
+    <>
 
-   {/* Navigation */}
-   <Header />
+      {/* Navigation */}
+      <Header />
 
       <div className="jumbotron feature">
         <div className="container">
-        {/* Carousel */}
+          {/* Carousel */}
           <Carousel />
 
         </div>
@@ -66,9 +66,9 @@ const Home = () => {
 
           {/* Articles */}
           {posts.map((post) => (
-            <Post key={post.id} title={post.title} description={post.description} time={post.time} comment_count={post.comment_count} share_count={post.share_count} />
+            <Post id={post.id} slug={post.slug} title={post.title} description={post.description} time={post.time} comment_count={post.comment_count} share_count={post.share_count} />
           ))}
-          
+
           <hr />
         </div>{/* /Center Column End */}
 
@@ -83,10 +83,10 @@ const Home = () => {
 
       </div>{/* /container-fluid */}
 
-{/* Footer */}
+      {/* Footer */}
       <Footer />
-     
-   </> 
+
+    </>
   )
 }
 
